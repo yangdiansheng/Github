@@ -20,3 +20,14 @@ fun <T:Any?> BooleanExt<T>.otherwise(block: () -> T): T=
         is Otherwise -> block()
         is WithData -> data
     }
+
+
+inline fun <T> Boolean.no(block: () -> T) =
+    when {
+        this -> {
+            Otherwise
+        }
+        else -> {
+            WithData(block())
+        }
+    }
