@@ -1,7 +1,9 @@
-package com.yangdiansheng.github
+package com.yangdiansheng.github.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.yangdiansheng.github.R
+import com.yangdiansheng.github.Setting
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

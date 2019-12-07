@@ -1,4 +1,4 @@
-package com.yangdiansheng.common
+package com.yangdiansheng.common.sharedpreferences
 
 import android.content.Context
 import kotlin.properties.ReadWriteProperty
@@ -15,8 +15,10 @@ class Preference<T>(private val context: Context,
     }
 
     override fun getValue(thisRef: Any?, property: KProperty<*>): T {
-        return getPrefernce(name)
+        return getPrefernce(findProperName(property))
     }
+
+    private fun findProperName(property: KProperty<*>) = if (name.isEmpty()) property.name else name
 
     private fun getPrefernce(key: String): T {
         return when (default) {
@@ -29,7 +31,7 @@ class Preference<T>(private val context: Context,
     }
 
     override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
-        putPrefernce(name, value)
+        putPrefernce(findProperName(property), value)
     }
 
     private fun putPrefernce(key: String, value: T) {

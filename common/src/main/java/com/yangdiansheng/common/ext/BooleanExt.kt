@@ -1,4 +1,4 @@
-package com.yangdiansheng.common
+package com.yangdiansheng.common.ext
 
 sealed class BooleanExt<out T>
 

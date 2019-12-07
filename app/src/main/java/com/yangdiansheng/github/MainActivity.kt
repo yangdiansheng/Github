@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.yangdiansheng.github.view.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         fab.setOnClickListener {
             val intent = Intent()
-            intent.setClass(this,LoginActivity::class.java)
+            intent.setClass(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

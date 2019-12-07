@@ -1,5 +1,7 @@
 package com.yangdiansheng.common
 
+import com.yangdiansheng.common.ext.no
+import com.yangdiansheng.common.ext.otherwise
 import org.junit.Test
 
 class ExampleUnitText{
