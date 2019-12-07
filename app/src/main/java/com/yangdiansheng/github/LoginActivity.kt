@@ -2,6 +2,8 @@ package com.yangdiansheng.github
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import com.yangdiansheng.mvp.impl.MainFragment
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -10,6 +12,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
+
+        val mainFragment = MainFragment()
+        Log.d("mvp", mainFragment.toString())
+        Log.d("mvp", mainFragment.presenter.toString())
+        Log.d("mvp", mainFragment.presenter.view.toString())
+
+        mainFragment.onResume()
+
 
         email.setText(Setting.email)
         password.setText(Setting.password)
