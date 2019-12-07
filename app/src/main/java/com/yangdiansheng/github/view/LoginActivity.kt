@@ -1,12 +1,13 @@
 package com.yangdiansheng.github.view
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.yangdiansheng.github.R
 import com.yangdiansheng.github.Setting
+import com.yangdiansheng.github.presenter.LoginPresenter
+import com.yangdiansheng.mvp.impl.BaseActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity<LoginPresenter>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
